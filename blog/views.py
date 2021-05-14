@@ -26,3 +26,9 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+from django.views.generic import TemplateView
+
+class AboutView(TemplateView):
+    template_name = "blog/about.html"
